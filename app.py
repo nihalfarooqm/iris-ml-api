@@ -22,6 +22,10 @@ def home():
 def health():
     return {'status': 'healthy'}
 
+@app.get('/where')
+def where():
+    return {"message": "Iris ML API is running from GitHub deployment"}
+
 @app.post('/predict')
 def predict(data: IrisInput):
     features = [[
